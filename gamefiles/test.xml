@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<!-- game holds the whole game.  There should only be one per file. --> 
+<game>
+	<map>
+		<!--  give the map a name.  This will help you connect places -->
+		<name>town</name>
+		<!--  What will this look like from another map -->
+		<icon>img/town.png</icon>
+		<symbol>#</symbol>
+		<!--  Give yourself a size for the map -->
+		<width>20</width>
+		<height>20</height>
+		<!--  What kind of tiles would you like to use and do you want them to be randomly generated (and how) -->
+		<theme>town</theme>
+		<generation>
+				WWWWWWWWWWWWWWWWWWWW
+				WTTGGGGGGGGGGGTTTTTW
+				WGGGHXHHHGGGGGGTTTTW
+				WGTGHIIIHGGGGGGGGTTW
+				WGGGHIIIHGGGHHXHGGGW
+				WGGGHXHDHGGGDIIXGGGW
+				WGGTGGGGGGGGHXHHGGGW
+				WGTTGGGGGGGGGGGGGGGW
+				WGGGHHHXHHHHGGGGGGGW
+				OGGGHIIIIIIHGGGGGTGS
+				WGGGHIIIIIIDGGGGGGGW
+				WGGGXIIIIIIHGGGGGGGW
+				WGGGHIIIIIIXGGTGGGGW
+				WGGGHIIIIIIHGGGGGGGW
+				WGGGHHDHHXHHGGGGGGGW
+				WGTTGGGGGGGGGGGTGGGW
+				WGGGGGTTGGGGGGGGGGGW
+				WGGGTTTTTTGGGGTTGGGW
+				WGGGTTTTTTGGGGGGGGGW
+				WWWWWWWWWWWWWWWWWWWW
+		</generation>
+		<!-- What types of enemies are around this area, and how often are you likely to see them.  Threat is how many enemies you'll start with per 100 tiles.  -->
+		<enemyTheme>Town</enemyTheme>
+		<itemTheme>Normal</itemTheme>
+		<threat>100</threat>
+		<!-- You can have multiple connection points to other maps -->
+		<connection>overland desert</connection>
+		<!-- Upon loading this map for the first time, you can write a story that shows up in a file -->
+		<story>gamefiles/town.png</story>
+		<background>img/grass.png</background>
+	</map>
+	<map>
+		<!--  give the map a name.  This will help you connect places -->
+		<name>FortParselli</name>
+		<!--  What will this look like from another map -->
+		<icon>img/fort.png</icon>
+		<symbol>A</symbol>
+		<!--  Give yourself a size for the map -->
+		<width>50</width>
+		<height>50</height>
+		<!--  What kind of tiles would you like to use and do you want them to be randomly generated (and how) -->
+		<theme>fort</theme>
+		<generation>gamefiles/fortparselli.txt</generation>
+		<!-- What types of enemies are around this area, and how often are you likely to see them.  Threat is how many enemies you'll start with per 100 tiles.  -->
+		<enemyTheme>none</enemyTheme>
+		<itemTheme>Normal</itemTheme>
+		<threat>5</threat>
+		<!-- You can have multiple connection points to other maps -->
+		<connection>overland</connection>
+		<story>none</story>
+		<background>img/grass.png</background>
+	</map>
+	<!-- Each game holds any number of maps -->
+	<map>
+		<!--  give the map a name.  This will help you connect places -->
+		<name>overland</name>
+		<!--  What will this look like from another map -->
+		<icon>img/overland.png</icon>
+		<symbol>O</symbol>
+		<!--  Give yourself a size for the map -->
+		<width>100</width>
+		<height>100</height>
+		<!--  What kind of tiles would you like to use and do you want them to be randomly generated (and how) -->
+		<theme>grass</theme>
+		<generation>world</generation>
+		<!-- What types of enemies are around this area, and how often are you likely to see them.  Threat is how many enemies you'll start with per 100 tiles.  -->
+		<enemyTheme>Slimes</enemyTheme>
+		<itemTheme>Normal</itemTheme>
+		<threat>5</threat>
+		<!-- You can have multiple connection points to other maps -->
+		<connection>town FortParselli slimehalls</connection>
+		<!-- Upon loading this map for the first time, you can write a story that shows up in a file -->
+		<story>gamefiles/intro.png</story>
+		<background>img/grass.png</background>
+	</map>
+	
+	<map>
+		<name>desert</name>
+		<icon>img/overland.png</icon>
+		<symbol>S</symbol>
+		<width>50</width>
+		<height>50</height>
+		<theme>sand</theme>
+		<generation>random</generation>
+		<enemyTheme>Desert</enemyTheme>
+		<itemTheme>Normal</itemTheme>
+		<threat>15</threat>
+		<connection>town dungeon1 maze1</connection>
+		<story>none</story>
+		<background>img/sand.png</background>
+	</map>
+	
+	<map>
+		<name>maze1</name>
+		<icon>img/labyrinth.png</icon>
+		<symbol>b</symbol>
+		<width>41</width>
+		<height>31</height>
+		<theme>dungeon</theme>
+		<generation>maze</generation>
+		<enemyTheme>Labyrinth</enemyTheme>
+		<itemTheme>Normal</itemTheme>
+		<threat>50</threat>
+		<connection>desert</connection>
+		<story>none</story>
+		<background>img/floor.png</background>
+	</map>
+	<map>
+		<name>slimehalls</name>
+		<icon>img/stoneedifice.png</icon>
+		<symbol>c</symbol>
+		<width>50</width>
+		<height>40</height>
+		<theme>halls</theme>
+		<generation>halls</generation>
+		<enemyTheme>Deepslimes</enemyTheme>
+		<itemTheme>Normal</itemTheme>
+		<threat>60</threat>
+		<connection>overland</connection>
+		<story>none</story>
+		<background>img/stonefloor.png</background>
+	</map>
+	
+	<map>
+		<name>dungeon1</name>
+		<icon>img/dungeon.png</icon>
+		<symbol>a</symbol>
+		<width>80</width>
+		<height>40</height>
+		<theme>dungeon</theme>
+		<generation>dungeon</generation>
+		<enemyTheme>Desert</enemyTheme>
+		<itemTheme>Normal</itemTheme>
+		<threat>20</threat>
+		<connection>desert dungeon2</connection>
+		<story>none</story>
+		<background>img/stonefloor.png</background>
+	</map>
+	<map>
+		<name>dungeon2</name>
+		<icon>img/dungeon.png</icon>
+		<symbol>b</symbol>
+		<width>70</width>
+		<height>70</height>
+		<theme>dungeon</theme>
+		<generation>dungeon</generation>
+		<enemyTheme>dungeon</enemyTheme>
+		<itemTheme>Normal</itemTheme>
+		<threat>30</threat>
+		<connection>dungeon1 dungeon3</connection>
+		<story>none</story>		
+		<background>img/stonefloor.png</background>
+	</map>
+	<map>
+		<name>dungeon3</name>
+		<icon>img/dungeon.png</icon>
+		<symbol>b</symbol>
+		<width>70</width>
+		<height>70</height>
+		<theme>dungeon</theme>
+		<generation>dungeon</generation>
+		<enemyTheme>dungeon</enemyTheme>
+		<itemTheme>Normal</itemTheme>
+		<threat>30</threat>
+		<connection>dungeon2</connection>
+		<story>none</story>		
+		<background>img/stonefloor.png</background>
+	</map>
+	
+	
+</game>

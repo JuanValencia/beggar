@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<!-- game holds the whole game.  There should only be one per file. --> 
+<game>
+	<!-- Each game holds any number of maps -->
+	<map>
+		<!--  give the map a name.  This will help you connect places -->
+		<name>overland</name>
+		<!--  What will this look like from another map -->
+		<icon>img/overland.png</icon>
+		<!--  Give yourself a size for the map -->
+		<width>100</width>
+		<height>120</height>
+		<!--  What kind of tiles would you like to use and do you want them to be randomly generated (and how) -->
+		<theme>grass</theme>
+		<generation>random</generation>
+		<!-- What types of enemies are around this area, and how often are you likely to see them.  Threat is how many enemies you'll start with per 100 tiles.  -->
+		<enemyTheme>Slimes</enemyTheme>
+		<threat>5</threat>
+		<!-- You can have multiple connection points to other maps -->
+		<connection>town</connection>
+	</map>
+	<map>
+		<!--  give the map a name.  This will help you connect places -->
+		<name>town</name>
+		<!--  What will this look like from another map -->
+		<icon>img/town.png</icon>
+		<!--  Give yourself a size for the map -->
+		<width>20</width>
+		<height>20</height>
+		<!--  What kind of tiles would you like to use and do you want them to be randomly generated -->
+		<theme>town</theme>
+		<generation>
+				wwwwwwwwwwwwwwwwwwww
+				wggggggggggggggggggw
+				wggghhhhhggggggggggw
+				wggghggghggggggggggw
+				wggghggghggghhhhgggw
+				wggghdhhhgggdgghgggw
+				wggggggggggghhhhgggw
+				wggggggggggggggggggw
+				wggghhhhhhhhgggggggw
+				eggghgggggghgggggggw
+				wggghggggggdgggggggw
+				wggghgggggghgggggggw
+				wggghgggggghgggggggw
+				wggghgggggghgggggggw
+				wggghhdhhhhhgggggggw
+				wggggggggggggggggggw
+				wggggggggggggggggggw
+				wggggggggggggggggggw
+				wggggggggggggggggggw
+				wwwwwwwwwwwwwwwwwwww
+		</generation>
+		<!-- What types of enemies are around this area, and how often are you likely to see them.  Threat is how many enemies you'll start with per 100 tiles.  
+		none means that no enemies will even spawn in this area -->
+		<enemyTheme>none</enemyTheme>
+		<threat>0</threat>
+		<!-- You can have multiple connection points to other maps -->
+		<connection>overland</connection>
+	</map>
+	
+	<!-- Theme sets let you define what various places look like -->
+	<theme>
+		<name>grass</name>
+		
+		<tile>
+			<symbol>g</symbol>
+			<image>img/grass.png</image>
+			<type>walkable</type>
+			<description>grass... lots of grass...</description>
+		</tile>
+		<tile>
+			<symbol>g</symbol>
+			<image>img/grass.png</image>
+			<type>walkable</type>
+			<description>grass</description>
+		</tile>
+		<tile>
+			<symbol>g</symbol>				
+			<image>img/grass.png</image>
+			<type>walkable</type>
+			<description>more grass</description>
+		</tile>
+		<tile>
+			<symbol>g</symbol>	
+			<image>img/grass.png</image>
+			<type>walkable</type>
+			<description>last time I checked... grass...</description>
+		</tile>
+		<tile>
+			<symbol>g</symbol>	
+			<image>img/grass.png</image>
+			<type>walkable</type>
+			<description>It's green, it's good, it's grass!</description>
+		</tile>
+		<tile>
+			<symbol>g</symbol>	
+			<image>img/grass2.png</image>
+			<type>walkable</type>
+			<description>Green.  Definately green.</description>
+		</tile>
+		<tile>
+			<symbol>g</symbol>	
+			<image>img/grass3.png</image>
+			<type>walkable</type>
+			<description>Lush grass.  Full of happy things!!</description>
+		</tile>
+		<tile>
+			<symbol>g</symbol>	
+			<image>img/grass4.png</image>
+			<type>walkable</type>
+			<description>Grass.  Boring.</description>
+		</tile>
+		<tile>
+			<symbol>p</symbol>	
+			<image>img/palm.png</image>
+			<type>walkable</type>
+			<description>A palm tree.  If only it had coconuts</description>
+		</tile>
+		<tile>
+			<symbol>p</symbol>	
+			<image>img/palm2.png</image>
+			<type>walkable</type>
+			<description>A swaying palm.  I wish it would dance.</description>
+		</tile>
+		<tile>
+			<symbol>t</symbol>	
+			<image>img/tree.png</image>
+			<type>walkable</type>
+			<description>Nice tree!</description>
+		</tile>
+		<tile>
+			<symbol>t</symbol>	
+			<image>img/tree2.png</image>
+			<type>walkable</type>
+			<description>This tree seems to say 'leave me alone!'</description>
+		</tile>
+		
+	</theme>
+	<theme>
+		<name>town</name>
+		<tile>
+			<symbol>g</symbol>	
+			<image>img/palm2.png</image>
+			<type>walkable</type>
+			<description>A swaying palm.  I wish it would dance.</description>
+		</tile>
+		<tile>
+			<symbol>g</symbol>	
+			<image>img/tree.png</image>
+			<type>walkable</type>
+			<description>Nice tree!</description>
+		</tile>
+		<tile>
+			<symbol>g</symbol>	
+			<image>img/tree2.png</image>
+			<type>walkable</type>
+			<description>This tree seems to say 'leave me alone!'</description>
+		</tile>
+		<tile>
+			<symbol>g</symbol>
+			<image>img/grass.png</image>
+			<type>walkable</type>
+			<description>grass... lots of grass...</description>
+		</tile>
+	
+	
+		<tile>
+			<symbol>h</symbol>	
+			<image>img/house.png</image>
+			<alt-image>img/houseBroken.png</alt-image>
+			<type>solid, breakable</type>
+			<description>The wood structure doesn't look so good.</description>
+		</tile>
+		<tile>
+			<symbol>w</symbol>
+			<image>img/citywall.png</image>
+			<type>solid</type>
+			<description>This wall can't be doing very much.</description>
+		</tile>
+	
+	
+		<tile>
+			<symbol>d</symbol>	
+			<image>img/door.png</image>
+			<alt-image>img/dooropen.png</alt-image>
+			<type>door</type>
+			<description>At least the door looks sturdy.</description>
+		</tile>
+	
+	</theme>
+	
+	<!-- enemyTheme lets you choose what kind of enemies are in a certain place -->
+	
+	
+</game>
